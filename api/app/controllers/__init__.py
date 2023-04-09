@@ -78,7 +78,7 @@ class OrderController:
 
 
     def put_order(json_data,order_id):
-        Order = Order.query.get(order_id)
+        Order = Order.query.get(order_id) 
         order_schema = OrderSchema()
         updated_order = order_schema.load(json_data)
         order.status = updated_order.status
